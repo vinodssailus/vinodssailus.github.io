@@ -22,9 +22,28 @@ background-attachment:fixed;
 background-position:center;
 }
 header{text-align:center;padding:70px 20px;border-bottom:1px solid #ddd}
-header img{width:170px;height:170px;border-radius:50%;object-fit:cover}
+header img{
+width:clamp(120px,35vw,170px);
+height:clamp(120px,35vw,170px);
+border-radius:50%;
+object-fit:cover;
+}
 h1{margin:10px 0 5px;font-weight:500}
-nav{background:#fff;border-bottom:1px solid #ddd;padding:10px;text-align:center;position:sticky;top:0}
+h1{font-size:clamp(28px,5vw,42px);}
+h2{font-size:clamp(22px,4vw,30px);}
+h3{font-size:clamp(18px,3vw,24px);}
+p, td{font-size:clamp(15px,2.5vw,18px);}
+nav{
+background:#fff;
+border-bottom:1px solid #ddd;
+padding:10px;
+text-align:center;
+position:sticky;
+top:0;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
 nav a{margin:0 12px;text-decoration:none;font-weight:bold;color:#333}
 .container{max-width:1000px;margin:auto;padding:40px 20px}
 .card{background:#fff;border:1px solid #eee;border-radius:12px;padding:28px;margin-bottom:40px}
@@ -36,8 +55,35 @@ text-align:center;
 table{width:100%;border-collapse:collapse}
 td{padding:6px 8px;vertical-align:top}
 .family{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
-.family img{max-width:320px;border-radius:10px}
+.family img{
+width:100%;
+max-width:320px;
+height:auto;
+border-radius:10px;
+}
 footer{text-align:center;color:#777;padding:30px}
+
+@media (max-width:700px){
+
+.container{
+padding:25px 15px;
+}
+
+.card{
+padding:20px;
+}
+
+header{
+padding:50px 15px;
+}
+
+nav a{
+margin:6px 10px;
+display:inline-block;
+}
+
+}
+
 </style>
 </head>
 
