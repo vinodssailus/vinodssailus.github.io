@@ -1,135 +1,178 @@
-<!DOCTYPE html>
+import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
 
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rev. Dr. Vinod S. Sailus</title>
+export default function VinodSSailusWebsite() {
+  const MEASUREMENT_ID = "G-DDZY71QJ27";
 
-<!-- Google Analytics -->
+  useEffect(() => {
+    const script1 = document.createElement("script");
+    script1.src = `https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`;
+    script1.async = true;
+    document.head.appendChild(script1);
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDZY71QJ27"></script>
+    const script2 = document.createElement("script");
+    script2.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} 
+      gtag('js', new Date());
+      gtag('config', '${MEASUREMENT_ID}');
+    `;
+    document.head.appendChild(script2);
+  }, []);
 
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-DDZY71QJ27');
-</script>
+  return (
+    <div className="min-h-screen bg-white text-gray-900">
 
-<style>
-html{scroll-behavior:smooth;}
-body{margin:0;font-family:Georgia, "Times New Roman", serif;background:#fff;color:#222;line-height:1.6}
-header{padding:80px 20px;border-bottom:1px solid #eee;text-align:center}
-header img{width:140px;height:140px;border-radius:50%;object-fit:cover;margin-bottom:15px}
-h1{font-size:44px;margin:0}
-.subtitle{color:#555;margin-top:10px}
-nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;padding:12px 20px;text-align:center}
-nav a{margin:0 12px;text-decoration:none;font-weight:600;color:#333}
-.container{max-width:950px;margin:auto;padding:40px 20px}
-section{margin-bottom:60px}
-h2{font-size:28px;margin-bottom:20px}
-.card{background:#fafafa;padding:25px;border-radius:14px}
-.timeline{border-left:3px solid #ccc;padding-left:25px}
-.timeline div{margin-bottom:20px;position:relative}
-.timeline div::before{content:'';position:absolute;left:-10px;top:5px;width:12px;height:12px;background:#555;border-radius:50%}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-footer{text-align:center;color:#777;padding:30px}
-@media(max-width:768px){
-.grid{grid-template-columns:1fr}
-header img{width:110px;height:110px}
-h1{font-size:34px}
+      {/* HERO HEADER WITH PROFILE PHOTO */}
+      <section className="border-b">
+        <div className="max-w-6xl mx-auto px-6 py-14 text-center">
+          {/* 👉 Replace image link with your real profile photo */}
+          <img
+            src="https://via.placeholder.com/200"
+            className="w-36 h-36 mx-auto rounded-full mb-6 object-cover"
+          />
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+            Rev. Dr. Vinod S. Sailus
+          </h1>
+          <p className="mt-4 text-lg text-gray-600">
+            Professor of Missiology • Intercultural Theology • Mission Research • Teaching & Ministry Leadership
+          </p>
+        </div>
+      </section>
+
+      {/* NAVIGATION */}
+      <nav className="sticky top-0 bg-white border-b z-10">
+        <div className="max-w-6xl mx-auto px-6 py-3 flex flex-wrap gap-6 text-sm font-medium justify-center">
+          <a href="#about">About</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#education">Education</a>
+          <a href="#ministry">Ministry</a>
+          <a href="#publications">Publications</a>
+          <a href="#family">Family</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div className="p-6 md:p-12">
+
+        {/* ABOUT */}
+        <motion.section
+          id="about"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="max-w-5xl mx-auto mb-12"
+        >
+          <Card className="rounded-2xl shadow-sm">
+            <CardContent className="p-6 text-gray-700 leading-relaxed">
+              <h2 className="text-2xl font-semibold mb-3">About</h2>
+              <p>
+                Rev. Dr. Vinod S. Sailus is an ordained Presbyter of the Church of South India and Professor of Missiology at
+                St. Peter’s Pontifical Institute, Bengaluru. His academic journey integrates intercultural theology, mission praxis,
+                interfaith dialogue, and contextual Christian witness within the Indian and global theological landscape.
+              </p>
+            </CardContent>
+          </Card>
+        </motion.section>
+
+        {/* TIMELINE */}
+        <section id="timeline" className="max-w-5xl mx-auto mb-12">
+          <Card className="rounded-2xl shadow-sm">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-semibold mb-4">Timeline</h2>
+              <ul className="space-y-2 text-gray-700 border-l pl-6">
+                <li>1980 – Born in Kerala</li>
+                <li>2004–2008 – BD, Gurukul Lutheran Theological College</li>
+                <li>2009 – Ordained Presbyter, CSI</li>
+                <li>2013–2015 – M.Th Missiology, UTC</li>
+                <li>2016–2019 – D.Th Studies, UTC</li>
+                <li>2021–2025 – Associate Professor & HoD, Gurukul</li>
+                <li>2025–Present – Professor, St. Peter’s Pontifical Institute</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* EDUCATION FROM CV */}
+        <section id="education" className="max-w-5xl mx-auto mb-12">
+          <Card className="rounded-2xl shadow-sm">
+            <CardContent className="p-6 text-gray-700">
+              <h2 className="text-2xl font-semibold mb-4">Education</h2>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>BA (History), Christian College Kattakada</li>
+                <li>BD – Gurukul Lutheran Theological College (Academic Prize in Missiology)</li>
+                <li>M.Th. Missiology – United Theological College (Second Rank)</li>
+                <li>D.Th. Missiology – United Theological College</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* MINISTRY EXPERIENCE */}
+        <section id="ministry" className="max-w-5xl mx-auto mb-12">
+          <Card className="rounded-2xl shadow-sm">
+            <CardContent className="p-6 text-gray-700">
+              <h2 className="text-2xl font-semibold mb-4">Ministry & Leadership</h2>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Seven Years Full-Time Missionary Service in Telangana</li>
+                <li>Principal of CSI Mission Schools</li>
+                <li>Telangana State Mission Coordinator</li>
+                <li>Pastorate Chairman & Executive Committee Member, CSI</li>
+                <li>Professor of Missiology – St. Peter’s Pontifical Institute</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* PUBLICATIONS */}
+        <section id="publications" className="max-w-5xl mx-auto mb-12">
+          <Card className="rounded-2xl shadow-sm">
+            <CardContent className="p-6 text-gray-700">
+              <h2 className="text-2xl font-semibold mb-4">Publications</h2>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>Borderless God (2018)</li>
+                <li>Borderless Spirituality (2023)</li>
+                <li>The Development of Missiological Thinking and Praxis (2025)</li>
+                <li>The Dynamics of Mission in Transition (2025)</li>
+                <li>Doing Mission with Muslims (2026)</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* FAMILY SECTION WITH FAMILY PHOTO */}
+        <section id="family" className="max-w-5xl mx-auto mb-12">
+          <Card className="rounded-2xl shadow-sm">
+            <CardContent className="p-6 text-gray-700 text-center">
+              <h2 className="text-2xl font-semibold mb-4">Family</h2>
+              {/* 👉 Replace with your real family photo */}
+              <img
+                src="https://via.placeholder.com/600x350"
+                className="mx-auto rounded-xl mb-4"
+              />
+              <p>
+                Married to Vinitha V. R., with children Aleph V. Vinod, Ankith V. Vinod, and Aadhish V. Vinod. Family life
+                remains a vital part of his spiritual and ministerial journey.
+              </p>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* CONTACT */}
+        <section id="contact" className="max-w-5xl mx-auto mb-16">
+          <Card className="rounded-2xl shadow-sm">
+            <CardContent className="p-6 text-gray-700">
+              <h2 className="text-2xl font-semibold mb-3">Contact</h2>
+              <p>Email: rev.dr.vinodssailus@gmail.com</p>
+              <p>Church Affiliation: CSI South Kerala Diocese</p>
+            </CardContent>
+          </Card>
+        </section>
+      </div>
+
+      <footer className="text-center text-sm text-gray-500 pb-10">
+        © {new Date().getFullYear()} Rev. Dr. Vinod S. Sailus
+      </footer>
+    </div>
+  );
 }
-</style>
-
-</head>
-
-<body>
-
-<header>
-<!-- 👉 Replace image link later with your real photo -->
-<img src="https://via.placeholder.com/300" alt="Profile Photo">
-<h1>Rev. Dr. Vinod S. Sailus</h1>
-<p class="subtitle">Professor of Missiology • Intercultural Theology • Mission Research • Teaching & Ministry</p>
-</header>
-
-<nav>
-<a href="#about">About</a>
-<a href="#timeline">Timeline</a>
-<a href="#publications">Publications</a>
-<a href="#teaching">Teaching</a>
-<a href="#mission">Mission</a>
-<a href="#contact">Contact</a>
-</nav>
-
-<div class="container">
-
-<section id="about" class="card">
-<h2>About</h2>
-<p><strong>A Journey Shaped by Faith, Mission, and Scholarship</strong></p>
-<p>Rev. Dr. Vinod S. Sailus serves as Professor of Missiology at St. Peter’s Pontifical Institute, Bengaluru. His academic and ministerial journey integrates pastoral leadership, theological scholarship, and intercultural dialogue within the Indian and global context.</p>
-</section>
-
-<section id="timeline" class="card">
-<h2>Timeline</h2>
-<div class="timeline">
-<div><strong>1980</strong> — Born in Kerala</div>
-<div><strong>2004–2008</strong> — BD, Gurukul Lutheran Theological College</div>
-<div><strong>2009</strong> — Ordained Presbyter, Church of South India</div>
-<div><strong>2013–2015</strong> — M.Th. Missiology, UTC Bengaluru</div>
-<div><strong>2016–2019</strong> — Doctoral Studies (D.Th.)</div>
-<div><strong>2021–2025</strong> — Associate Professor & HoD, Gurukul</div>
-<div><strong>2025–Present</strong> — Professor, St. Peter’s Pontifical Institute</div>
-</div>
-</section>
-
-<section id="publications" class="card">
-<h2>Publications</h2>
-<div class="grid">
-<div>
-<h3>Books</h3>
-<ul>
-<li>Borderless God (2018)</li>
-<li>Borderless Spirituality (2023)</li>
-<li>The Development of Missiological Thinking and Praxis (2025)</li>
-<li>The Dynamics of Mission in Transition (2025)</li>
-<li>Doing Mission with Muslims (2026)</li>
-</ul>
-</div>
-<div>
-<h3>Selected Articles</h3>
-<ul>
-<li>Hermeneutics of Brahmajijñāsā</li>
-<li>Bengaluru Karaga as Sharing Sacred Spaces</li>
-<li>Breathing the Prāṇa of God</li>
-<li>Religious Diversity and Migrant Communities</li>
-<li>Mission in the Age of Artificial Intelligence</li>
-</ul>
-</div>
-</div>
-</section>
-
-<section id="teaching" class="card">
-<h2>Teaching</h2>
-<p>Intercultural theology, mission studies, contextual Christian witness, and interfaith dialogue with supervision of BD, M.Th., D.Min., and Ph.D. scholars.</p>
-</section>
-
-<section id="mission" class="card">
-<h2>Mission</h2>
-<p>Over three decades of ministerial experience including grassroots missionary service in Telangana, leadership in CSI mission schools, and pastoral ministry within the Church of South India.</p>
-</section>
-
-<section id="contact" class="card">
-<h2>Contact</h2>
-<p>Email: rev.dr.vinodssailus@gmail.com</p>
-<p>St. Peter’s Pontifical Institute, Bengaluru</p>
-</section>
-
-</div>
-
-<footer>
-© 2026 Rev. Dr. Vinod S. Sailus
-</footer>
-
-</body>
-</html>
