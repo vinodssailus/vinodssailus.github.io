@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,7 +7,9 @@
 <title>Rev. Dr. Vinod S. Sailus</title>
 
 <!-- Google Analytics -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDZY71QJ27"></script>
+
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -15,28 +18,39 @@ gtag('config', 'G-DDZY71QJ27');
 </script>
 
 <style>
-body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#ffffff;color:#222}
-header{padding:60px 20px;border-bottom:1px solid #eee}
-.container{max-width:900px;margin:auto;padding:40px 20px}
-nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;padding:10px 20px}
-nav a{margin-right:15px;text-decoration:none;color:#333;font-weight:600}
-section{margin-bottom:50px}
-h1{font-size:42px;margin:0}
-h2{font-size:26px;margin-bottom:15px}
-.card{background:#fafafa;padding:25px;border-radius:12px}
-.timeline{border-left:3px solid #ddd;padding-left:20px}
-.timeline div{margin-bottom:20px}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:Georgia, "Times New Roman", serif;background:#fff;color:#222;line-height:1.6}
+header{padding:80px 20px;border-bottom:1px solid #eee;text-align:center}
+header img{width:140px;height:140px;border-radius:50%;object-fit:cover;margin-bottom:15px}
+h1{font-size:44px;margin:0}
+.subtitle{color:#555;margin-top:10px}
+nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;padding:12px 20px;text-align:center}
+nav a{margin:0 12px;text-decoration:none;font-weight:600;color:#333}
+.container{max-width:950px;margin:auto;padding:40px 20px}
+section{margin-bottom:60px}
+h2{font-size:28px;margin-bottom:20px}
+.card{background:#fafafa;padding:25px;border-radius:14px}
+.timeline{border-left:3px solid #ccc;padding-left:25px}
+.timeline div{margin-bottom:20px;position:relative}
+.timeline div::before{content:'';position:absolute;left:-10px;top:5px;width:12px;height:12px;background:#555;border-radius:50%}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 footer{text-align:center;color:#777;padding:30px}
+@media(max-width:768px){
+.grid{grid-template-columns:1fr}
+header img{width:110px;height:110px}
+h1{font-size:34px}
+}
 </style>
+
 </head>
 
 <body>
 
 <header>
-<div class="container">
+<!-- 👉 Replace image link later with your real photo -->
+<img src="https://via.placeholder.com/300" alt="Profile Photo">
 <h1>Rev. Dr. Vinod S. Sailus</h1>
-<p>Professor of Missiology • Intercultural Theology • Mission Research • Teaching & Ministry</p>
-</div>
+<p class="subtitle">Professor of Missiology • Intercultural Theology • Mission Research • Teaching & Ministry</p>
 </header>
 
 <nav>
@@ -53,24 +67,27 @@ footer{text-align:center;color:#777;padding:30px}
 <section id="about" class="card">
 <h2>About</h2>
 <p><strong>A Journey Shaped by Faith, Mission, and Scholarship</strong></p>
-<p>Rev. Dr. Vinod S. Sailus serves as Professor of Missiology at St. Peter’s Pontifical Institute, Bengaluru. His work integrates pastoral ministry, theological scholarship, and intercultural dialogue, contributing to contemporary missiology and Indian Christian theology.</p>
+<p>Rev. Dr. Vinod S. Sailus serves as Professor of Missiology at St. Peter’s Pontifical Institute, Bengaluru. His academic and ministerial journey integrates pastoral leadership, theological scholarship, and intercultural dialogue within the Indian and global context.</p>
 </section>
 
 <section id="timeline" class="card">
 <h2>Timeline</h2>
 <div class="timeline">
-<div><strong>1980</strong> — Born in Kerala, India</div>
+<div><strong>1980</strong> — Born in Kerala</div>
 <div><strong>2004–2008</strong> — BD, Gurukul Lutheran Theological College</div>
 <div><strong>2009</strong> — Ordained Presbyter, Church of South India</div>
-<div><strong>2013–2015</strong> — M.Th. in Missiology, UTC Bengaluru</div>
-<div><strong>2016–2019</strong> — Doctoral Studies (D.Th.), UTC Bengaluru</div>
-<div><strong>2021–2025</strong> — Associate Professor & Head, Gurukul Lutheran Theological College</div>
-<div><strong>2025–Present</strong> — Professor of Missiology, St. Peter’s Pontifical Institute</div>
+<div><strong>2013–2015</strong> — M.Th. Missiology, UTC Bengaluru</div>
+<div><strong>2016–2019</strong> — Doctoral Studies (D.Th.)</div>
+<div><strong>2021–2025</strong> — Associate Professor & HoD, Gurukul</div>
+<div><strong>2025–Present</strong> — Professor, St. Peter’s Pontifical Institute</div>
 </div>
 </section>
 
 <section id="publications" class="card">
 <h2>Publications</h2>
+<div class="grid">
+<div>
+<h3>Books</h3>
 <ul>
 <li>Borderless God (2018)</li>
 <li>Borderless Spirituality (2023)</li>
@@ -78,16 +95,28 @@ footer{text-align:center;color:#777;padding:30px}
 <li>The Dynamics of Mission in Transition (2025)</li>
 <li>Doing Mission with Muslims (2026)</li>
 </ul>
+</div>
+<div>
+<h3>Selected Articles</h3>
+<ul>
+<li>Hermeneutics of Brahmajijñāsā</li>
+<li>Bengaluru Karaga as Sharing Sacred Spaces</li>
+<li>Breathing the Prāṇa of God</li>
+<li>Religious Diversity and Migrant Communities</li>
+<li>Mission in the Age of Artificial Intelligence</li>
+</ul>
+</div>
+</div>
 </section>
 
 <section id="teaching" class="card">
 <h2>Teaching</h2>
-<p>Teaching focuses on intercultural theology, mission studies, contextual Christian witness, and interfaith dialogue, including supervision of BD, M.Th., D.Min., and Ph.D. scholars.</p>
+<p>Intercultural theology, mission studies, contextual Christian witness, and interfaith dialogue with supervision of BD, M.Th., D.Min., and Ph.D. scholars.</p>
 </section>
 
 <section id="mission" class="card">
 <h2>Mission</h2>
-<p>Over three decades of ministerial experience including missionary service in Telangana, leadership in CSI mission schools, and pastoral ministry as an ordained Presbyter.</p>
+<p>Over three decades of ministerial experience including grassroots missionary service in Telangana, leadership in CSI mission schools, and pastoral ministry within the Church of South India.</p>
 </section>
 
 <section id="contact" class="card">
